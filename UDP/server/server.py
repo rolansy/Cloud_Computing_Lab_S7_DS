@@ -1,18 +1,16 @@
 import socket
 
 def start_udp_server():
-    host = '127.0.0.1'  # localhost
+    host = '127.0.0.1'  
     port = 12345
 
-    # Create a UDP socket
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-    # Bind to the address
     server_socket.bind((host, port))
     print(f"UDP server listening on {host}:{port}...")
 
     while True:
-        data, addr = server_socket.recvfrom(1024)  # Receive data from client
+        data, addr = server_socket.recvfrom(1024)  
         message = data.decode()
         print(f"Received from {addr}: {message}")
 
