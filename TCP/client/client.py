@@ -1,13 +1,11 @@
 import socket
 
 def start_client():
-    host = '127.0.0.1'  # localhost (same as server)
+    host = '127.0.0.1'  
     port = 65432
 
-    # Create a TCP/IP socket
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-    # Connect to the server
     client_socket.connect((host, port))
 
     while True:
