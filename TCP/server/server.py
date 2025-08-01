@@ -1,16 +1,13 @@
 import socket
 
 def start_server():
-    host = '127.0.0.1'  # localhost
-    port = 65432        # arbitrary non-privileged port
+    host = '127.0.0.1'  
+    port = 65432        
 
-    # Create socket object with IPv4 and TCP
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-    # Bind socket to address
     server_socket.bind((host, port))
 
-    # Enable the server to accept connections (max 1 queued)
     server_socket.listen(1)
     print(f"Server listening on {host}:{port}...")
 
