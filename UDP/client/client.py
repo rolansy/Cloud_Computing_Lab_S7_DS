@@ -4,7 +4,6 @@ def start_udp_client():
     server_host = '127.0.0.1'
     server_port = 12345
 
-    # Create a UDP socket
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
     while True:
