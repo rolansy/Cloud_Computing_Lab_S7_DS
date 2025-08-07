@@ -2,7 +2,7 @@
 
 # ⚙️ Cloud_Computing_Lab_S7_DS
 
-Python backend demonstrating cloud computing concepts. Includes UDP/TCP clients/servers, a multi-user chat, and distance vector routing.
+Python backend demonstrating cloud computing concepts. Implements TCP/UDP servers/clients, a chat application, and distance vector routing.
 
 [![GitHub stars](https://img.shields.io/github/stars/{github_user}/{repo_name})](https://github.com/{github_user}/{repo_name}/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/{github_user}/{repo_name})](https://github.com/{github_user}/{repo_name}/network)
@@ -71,6 +71,7 @@ cd Cloud_Computing_Lab_S7_DS
 📁 multi_user_chat/
 │   ├── 🐍 chat_client_gui.py
 │   ├── 🐍 chat_server.py
+📝 README.md
 📝 readme.md
 ```
 
