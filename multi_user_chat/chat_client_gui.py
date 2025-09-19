@@ -38,6 +38,12 @@ class ChatClient:
             master.quit()
             return
 
+        # Show join message in chat area
+        self.text_area.config(state='normal')
+        self.text_area.insert(tk.END, "you have joined the chat\n")
+        self.text_area.config(state='disabled')
+        self.text_area.see(tk.END)
+
         # Start receiving thread
         threading.Thread(target=self.receive_messages, daemon=True).start()
 
@@ -46,6 +52,11 @@ class ChatClient:
         if msg:
             try:
                 self.client_socket.send(msg.encode())
+                # Show own message as 'you: message' in chat area
+                self.text_area.config(state='normal')
+                self.text_area.insert(tk.END, f"you: {msg}\n")
+                self.text_area.config(state='disabled')
+                self.text_area.see(tk.END)
                 self.entry_msg.delete(0, tk.END)
             except:
                 messagebox.showerror("Send Error", "Failed to send message")
